@@ -1,6 +1,13 @@
+using BeautyStudio.Extentions;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services
+    .RegisterServices()
+    .RegisterRepositories();
+    //.AddAutoMapper(typeof(Program));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
